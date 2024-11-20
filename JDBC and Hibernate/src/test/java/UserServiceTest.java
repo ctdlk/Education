@@ -1,13 +1,13 @@
 import nvyas.db.model.User;
 import nvyas.db.service.UserService;
-import nvyas.db.service.UserServiceImpl;
+import nvyas.db.service.UserServiceJDBCImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
 
 public class UserServiceTest {
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService = new UserServiceJDBCImpl();
 
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";
@@ -91,7 +91,7 @@ public class UserServiceTest {
             userService.saveUser(testName, testLastName, testAge);
             userService.cleanUsersTable();
 
-            if (userService.getAllUsers().size() != 0) {
+            if (!userService.getAllUsers().isEmpty()) {
                 Assert.fail("Метод очищения таблицы пользователей реализован не корректно");
             }
         } catch (Exception e) {
