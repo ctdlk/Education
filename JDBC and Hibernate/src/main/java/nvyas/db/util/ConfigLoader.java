@@ -12,11 +12,11 @@ public class ConfigLoader {
     static {
         try (InputStream input = ConfigLoader.class.getClassLoader().getResourceAsStream(CONFIG_FILE)) {
             if (input == null) {
-                throw new RuntimeException("Unable to find " + CONFIG_FILE);
+                throw new RuntimeException("Config file '" + CONFIG_FILE +"' is not found in the directory 'src/main/resources'");
             }
             properties.load(input);
         } catch (IOException e) {
-            throw new RuntimeException("Error loading configuration file", e);
+            throw new RuntimeException("Error while loading configuration file", e);
         }
     }
 

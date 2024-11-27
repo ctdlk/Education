@@ -2,7 +2,7 @@ package nvyas.db.service;
 
 import nvyas.db.dao.UserDao;
 import nvyas.db.dao.UserDaoJDBCImpl;
-import nvyas.db.model.User;
+import nvyas.db.entity.User;
 
 import java.util.List;
 

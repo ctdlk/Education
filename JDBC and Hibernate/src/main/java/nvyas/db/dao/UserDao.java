@@ -1,6 +1,6 @@
 package nvyas.db.dao;
 
-import nvyas.db.model.User;
+import nvyas.db.entity.User;
 
 import java.util.List;
 

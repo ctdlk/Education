@@ -1,0 +1,22 @@
+# JDBC Settings
+hibernate.connection.driver_class=your_driver
+hibernate.connection.url=jdbc:your_db
+hibernate.connection.username=username
+hibernate.connection.password=password
+
+# Hibernate Dialect
+hibernate.dialect=org.hibernate.dialect.db_dialect
+
+# Hibernate Settings
+hibernate.connection.pool_size=size (int)
+hibernate.connection.autocommit=true
+hibernate.hbm2ddl.auto=update
+
+# SQL-query options
+hibernate.show_sql=true
+hibernate.format_sql=true
+hibernate.use_sql_comments=true
+
+# Cache
+hibernate.cache.use_second_level_cache=false
+hibernate.cache.use_query_cache=false

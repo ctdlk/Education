@@ -1,5 +1,6 @@
-import nvyas.db.model.User;
+import nvyas.db.entity.User;
 import nvyas.db.service.UserService;
+import nvyas.db.service.UserServiceHibernateImpl;
 import nvyas.db.service.UserServiceJDBCImpl;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +8,8 @@ import org.junit.Test;
 import java.util.List;
 
 public class UserServiceTest {
-    private final UserService userService = new UserServiceJDBCImpl();
+//    private final UserService userService = new UserServiceJDBCImpl();
+    private final UserService userService = new UserServiceHibernateImpl();
 
     private final String testName = "Ivan";
     private final String testLastName = "Ivanov";

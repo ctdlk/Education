@@ -12,7 +12,11 @@
 
 # Config file with data
 src/main/resources/config.properties
+!src/main/resources/config.properties.example
 
+# Config file with hibernate settings
+src/main/resources/hibernate.properties
+!src/main/resources/hibernate.properties.example
 
 # Package Files #
 *.jar
