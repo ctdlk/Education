@@ -1,4 +1,4 @@
-package nvyas.spring;
+package nvyas.spring.entity;
 
 public class HelloWorld {
 
